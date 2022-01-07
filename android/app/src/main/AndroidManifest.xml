@@ -10,6 +10,7 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
+      
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
@@ -19,7 +20,26 @@
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" 
+        android:value="985145725421049"/>
+    
+    <activity android:name="com.facebook.FacebookActivity"
+        android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:label="SocialLogins" />
+    <activity
+        android:name="com.facebook.CustomTabActivity"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="@string/fb_login_protocol_scheme" />
         </intent-filter>
-      </activity>
+    </activity>
     </application>
 </manifest>
+
+
